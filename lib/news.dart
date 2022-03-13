@@ -20,13 +20,11 @@ class NewsView extends StatelessWidget {
           }
           if (state is ArtiSucces) {
             return ListView.separated(
-                separatorBuilder: (context, index) => Container(
-                      height: 5,
-                    ),
+                separatorBuilder: (context, index) => SizedBox(height: 5,),
                 itemBuilder: (context, index) => ArtiCard(
                       art: state.data.arti[index],
                     ),
-                padding: EdgeInsets.all(25),
+                padding: EdgeInsets.all(15),
                 itemCount: state.data.arti.length);
           }
           return ArtiCard();
