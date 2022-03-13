@@ -21,7 +21,7 @@ class NewsView extends StatelessWidget {
           if (state is ArtiSucces) {
             return ListView.separated(
                 separatorBuilder: (context, index) => Container(
-                      height: 15,
+                      height: 5,
                     ),
                 itemBuilder: (context, index) => ArtiCard(
                       art: state.data.arti[index],
